@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment - Web Development</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fc;
+      color: #333;
+    }
+
+    header {
+      background-color: #e87d0a;
+      padding: 10px 40px;
+      color: white;
+    }
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 8px;
+    }
+
+    .top-header span {
+      margin-right: 20px;
+    }
+
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .main-header h1 {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #002aff;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 30px;
+      padding: 5px 15px;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      padding: 6px;
+      border-radius: 30px;
+    }
+
+    .search-box button {
+      background: none;
+      border: none;
+      font-size: 16px;
+      color: #0a42e8;
+      cursor: pointer;
+    }
+
+    .payment-section {
+      padding: 60px 20px;
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+    }
+
+    .payment-section h2 {
+      text-align: center;
+      color: #1e4fcb;
+      margin-bottom: 30px;
+    }
+
+    .payment-section p {
+      text-align: center;
+      color: #4777f1;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .form-control {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    button.form-control {
+      background: #1e4fcb;
+      color: white;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button.form-control:hover {
+      background: #0f33a8;
+    }
+
+    @media (max-width: 768px) {
+      .main-header, .top-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="top-header">
+      <span>📍 <strong>Address:</strong> Ahmedabad, India</span>
+      <span>📧 <strong>Email:</strong> web@development.com</span>
+      <span>📞 <strong>Phone:</strong> +91 9876543210</span>
+    </div>
+
+    <div class="main-header">
+      <h1>🌐 Web <span style="color: blue;">Development</span></h1>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="company.html" style="text-decoration: underline;">Company</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Payment Form -->
+  <!-- Payment Form -->
+<section class="payment-section">
+  <h2>Make a Payment</h2>
+  <p>Start your new journey with just rupees 5000</p>
+  <form id="paymentForm">
+    <input type="text" class="form-control" name="fullname" placeholder="Full Name" required />
+    <input type="email" class="form-control" name="email" placeholder="Email Address" required />
+
+    <!-- Fixed Amount Field -->
+    <input type="number" class="form-control" name="amount" placeholder="Amount (Minimum ₹5000)" min="5000" required />
+
+    <select class="form-control" name="method" required>
+      <option value="">-- Select Payment Method --</option>
+      <option value="Credit Card">Credit Card</option>
+      <option value="UPI">UPI</option>
+      <option value="Bank Transfer">Bank Transfer</option>
+    </select>
+    
+    <textarea class="form-control" name="notes" placeholder="Payment Notes (Optional)"></textarea>
+    <button type="submit" class="form-control">Proceed to Pay</button>
+  </form>
+</section>
+
+  <script>
+  document.getElementById("paymentForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const amount = parseInt(document.querySelector('input[name="amount"]').value);
+
+    if (isNaN(amount) || amount < 5000) {
+      alert("⚠ Amount must be ₹5000 or more to proceed!");
+      return;
+    }
+    else {
+      setTimeout(() => {
+      alert("✅ Payment Done Successfully! We will reach out to you as soon as possible.");
+      }, 10); // Slight delay to ensure alert shows after form submission
+      setTimeout(() => {
+        window.location.href = "loader2.html"; // Redirect after payment
+      }, 7000); // 7 seconds delay for simulation
+      return;
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Studies - Web Development</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fffaf5;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header, footer {
+      background: #ffb547;
+      color: #000;
+      padding: 20px 40px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 80px 20px;
+      background: #fff1db;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #333;
+      max-width: 700px;
+    }
+
+    .steps {
+      padding: 60px 20px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .steps h3 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .step {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      background: #fff9f0;
+      padding: 20px 30px;
+      border-left: 5px solid #ffb547;
+      text-align: left;
+      border-radius: 8px;
+    }
+
+    .features, .use-cases {
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      background: #f4f7fc;
+    }
+
+    .feature-card {
+      width: 280px;
+      background: white;
+      margin: 20px;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+      text-align: center;
+    }
+
+    .feature-card h4 {
+      margin-bottom: 10px;
+      color: #ff8c00;
+    }
+
+    .feature-card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .cta {
+      padding: 60px 20px;
+      background: #ffefc1;
+      text-align: center;
+    }
+
+    .cta h3 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .cta button {
+      padding: 12px 28px;
+      background: #ffb547;
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 30px;
+      padding: 5px 15px;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      padding: 6px 10px;
+      border-radius: 30px;
+    }
+
+    .search-box button {
+      background: none;
+      border: none;
+      color: #0a42e8;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .features, .use-cases {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <h1>🌐 Web <span style="color: #005eff;">Development</span></h1>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="company.html">Company</a></li>
+          <li><a href="case-studies.html" style="text-decoration: underline;">Case Studies</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <input type="text" placeholder="Search Here" />
+        <button>🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Real Stories, Real Solutions</h2>
+    <p>Explore how companies partnered with us to solve critical tech challenges, build scalable products, and boost digital transformation.</p>
+  </section>
+
+  <!-- How It Works -->
+  <section class="steps">
+    <h3>How We Help Companies Grow</h3>
+    <div class="step"><strong>01.</strong> Analyze client’s business model and challenges</div>
+    <div class="step"><strong>02.</strong> Design scalable and custom-fit web & software solutions</div>
+    <div class="step"><strong>03.</strong> Develop & test using agile methodology</div>
+    <div class="step"><strong>04.</strong> Deploy & support continuously with full transparency</div>
+  </section>
+
+  <!-- Case Study Features -->
+  <section class="features">
+    <div class="feature-card">
+      <h4>Cloud Migration</h4>
+      <p>We helped an eCommerce firm reduce server costs by 40% through smart cloud migration strategy.</p>
+    </div>
+    <div class="feature-card">
+      <h4>Real-Time Analytics</h4>
+      <p>A logistics company scaled their operations with our custom real-time tracking and analytics dashboard.</p>
+    </div>
+    <div class="feature-card">
+      <h4>API Integration</h4>
+      <p>Integrated 30+ financial APIs for a fintech startup to provide seamless user transactions.</p>
+    </div>
+  </section>
+
+  <!-- Use Case Types -->
+  <section class="use-cases">
+    <div class="feature-card">
+      <h4>Startups</h4>
+      <p>We empower startups to launch MVPs quickly, iterate fast, and scale smoothly with full-stack support.</p>
+    </div>
+    <div class="feature-card">
+      <h4>SMEs</h4>
+      <p>Mid-sized businesses use our tailored web apps to automate tasks, boost productivity, and lower costs.</p>
+    </div>
+    <div class="feature-card">
+      <h4>Enterprises</h4>
+      <p>Our enterprise-grade solutions support complex infrastructures with security, performance, and agility.</p>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <h3>Want to be our next success story?</h3>
+    <button onclick="location.href='contact.html'">Partner With Us</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Web Development Company. All rights reserved.
+  </footer>
+
+</body>
+</html>

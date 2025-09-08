@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog - Web Development</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fc;
+      color: #222;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: orange;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #fff;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      gap: 40px;
+      padding: 40px;
+    }
+
+    /* Featured Post */
+    .featured {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+    }
+
+    .featured img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .featured h2 {
+      margin: 15px 0 10px;
+      font-size: 24px;
+      color: #111;
+    }
+
+    .featured p {
+      color: #555;
+    }
+
+    /* What's New Grid */
+    .latest-posts {
+      margin-top: 40px;
+    }
+
+    .latest-posts h3 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .post-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .post-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .post-card .content {
+      padding: 15px;
+    }
+
+    .post-card h4 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #1a1a1a;
+    }
+
+    .post-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .sidebar-section {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .sidebar-section h4 {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .popular-post {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .popular-post img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .popular-post div {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background: #e7f0ff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      color: #1e4fcb;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      background: rgb(236, 169, 45);
+      color: black;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      font-size: 14px;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 30px;
+      padding: 5px 15px;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      padding: 6px 10px;
+      border-radius: 30px;
+    }
+
+    .search-box button {
+      background: none;
+      border: none;
+      color: #0a42e8;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .sidebar-section {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>📡 Development Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="company.html">Company</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="blog.html" style="text-decoration: underline;">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search-box">
+      <input type="text" placeholder="Search Here" />
+      <button>🔍</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Main Blog Content -->
+    <div>
+      <!-- Featured Post -->
+      <section class="featured">
+        <img src="https://www.agilitypr.com/wp-content/uploads/2020/01/virtual-1.jpg" alt="VR Technology" />
+        <h2>What are the main features that interest you in our product</h2>
+        <p>Explore the cutting-edge capabilities of our VR-based technology and how it is reshaping digital experiences.</p>
+      </section>
+
+      <!-- What's New -->
+      <section class="latest-posts">
+        <h3>What's New</h3>
+        <div class="grid">
+          <div class="post-card">
+            <img src="https://media.licdn.com/dms/image/v2/D5622AQEo9x7uEmUVQQ/feedshare-shrink_800/feedshare-shrink_800/0/1730189533874?e=2147483647&v=beta&t=kMdr2ACVa9Z3nXp6O8oNlxk2Rb7JXC63vBP5hjnS0gA" alt="Post 1">
+            <div class="content">
+              <h4>Do you feel like yourself unlocked?</h4>
+              <p>New innovations in AR tech are helping people rediscover creativity and expression.</p>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://www.solulab.com/wp-content/uploads/2022/10/AI-in-Web3-1.jpg" alt="Post 2">
+            <div class="content">
+              <h4>Trends to follow in 2025</h4>
+              <p>Everything you need to know about AI, XR, and Web3 as they dominate the tech space.</p>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://media.licdn.com/dms/image/v2/D5612AQHoSlMudmkNjw/article-cover_image-shrink_720_1280/B56ZWdeyoqHEAI-/0/1742103850425?e=2147483647&v=beta&t=eoTF4NUoXf64yErHGxrMnejd81b-SYKEB3d76v-Cnkg" alt="Post 3">
+            <div class="content">
+              <h4>Why tech is getting more personal</h4>
+              <p>Personalized devices are taking over. Here's what you should expect next. Making Personalized With experience of AI.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Popular Posts -->
+      <div class="sidebar-section">
+        <h4>Popular Stories</h4>
+        <div class="popular-post">
+          <img src="https://300mind.studio/blog/wp-content/uploads/2023/08/Impacts-of-AR-VR-in-the-Gaming-Industry.webp" alt="">
+          <div>How VR gaming changed user engagement</div>
+        </div>
+        <div class="popular-post">
+          <img src="https://www.sciencefriday.com/wp-content/uploads/2021/05/Vakseen-The_Resilience_of_a_Rose_8x8__Acrylic_on_wood_2020.jpg" alt="">
+          <div>Exploring NFT art using AI in 2025</div>
+        </div>
+        <div class="popular-post">
+          <img src="https://www.author.thinkwithniche.com/allimages/project/thumb_fa2e1the-future-of-brand-marketing-virtual-influencers.jpg" alt="">
+          <div>The rise of virtual influencers</div>
+        </div>
+      </div>
+
+      <!-- Tags -->
+      <div class="sidebar-section">
+        <h4>Tags</h4>
+        <div class="tags">
+          <span class="tag">VR</span>
+          <span class="tag">AI</span>
+          <span class="tag">Web3</span>
+          <span class="tag">Startups</span>
+          <span class="tag">UX/UI</span>
+          <span class="tag">Technology</span>
+          <span class="tag">Innovation</span>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Development Blog. All rights reserved.
+  </footer>
+
+</body>
+</html>

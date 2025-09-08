@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company - Web Development</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #e87d0a;
+      padding: 10px 40px;
+      color: white;
+    }
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 8px;
+    }
+
+    .top-header span {
+      margin-right: 20px;
+    }
+
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .main-header h1 {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #002aff;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 30px;
+      padding: 5px 15px;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      padding: 6px;
+      border-radius: 30px;
+    }
+
+    .search-box button {
+      background: none;
+      border: none;
+      font-size: 16px;
+      color: #0a42e8;
+      cursor: pointer;
+    }
+
+    .company-section {
+      padding: 60px 40px;
+      text-align: center;
+      background: white;
+    }
+
+    .company-section h2 {
+      font-size: 32px;
+      color: #1e4fcb;
+      margin-bottom: 10px;
+    }
+
+    .company-section p {
+      font-size: 16px;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .company-grid {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .company-card {
+      background: #fff;
+      padding: 30px 20px;
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .company-card h3 {
+      font-size: 20px;
+      color: #e87d0a;
+      margin-bottom: 10px;
+    }
+
+    .company-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .form-section {
+      background: #fff;
+      margin: 60px 40px;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .form-section h3 {
+      font-size: 26px;
+      color: #1e4fcb;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .form-section input,
+    .form-section textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    .form-section textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-section button {
+      background: #1e4fcb;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .form-section button:hover {
+      background: #0f33a8;
+    }
+
+    .form-section .redirect {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .form-section .redirect a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #e87d0a;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .main-header, .top-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .company-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="top-header">
+      <span>📍 <strong>Address:</strong> Ahmedabad, India</span>
+      <span>📧 <strong>Email:</strong> web@development.com</span>
+      <span>📞 <strong>Phone:</strong> +91 9876543210</span>
+    </div>
+
+    <div class="main-header">
+      <h1>🌐 Web <span style="color: blue;">Development</span></h1>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="company.html" style="text-decoration: underline;">Company</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <input type="text" placeholder="Search Here" />
+        <button>🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Company -->
+  <section class="company-section">
+    <h2>About Our Company</h2>
+    <p>
+      We are a global team of developers, designers, and strategists delivering modern web solutions.
+      Our mission is to help businesses establish a strong digital presence with powerful websites,
+      scalable systems, and innovative solutions.
+    </p>
+
+    <div class="company-grid">
+      <div class="company-card">
+        <h3>Our Mission</h3>
+        <p>Empowering businesses with digital tools that drive growth, engagement, and value.</p>
+      </div>
+      <div class="company-card">
+        <h3>Our Vision</h3>
+        <p>To become a global leader in digital innovation and transformation.</p>
+      </div>
+      <div class="company-card">
+        <h3>Our Team</h3>
+        <p>A diverse mix of experts committed to creativity, code quality, and long-term success.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Us Form -->
+  <section class="form-section">
+    <h3>If you have your own company, fill this form and join with us</h3>
+    <form id="companyJoinForm">
+      <input type="text" name="companyName" placeholder="Company Name" required />
+      <input type="text" name="ownerName" placeholder="Owner Name" required />
+      <input type="text" name="contact" placeholder="Company Contact No." required />
+      <textarea name="details" placeholder="Company Details..." required></textarea>
+      <button type="submit" onclick="location.href='payment.html'">Join With Us</button>
+    </form>
+
+    <div class="redirect">
+      <p>If you don't have a company, you can explore our services instead.</p>
+      <a href="services.html">Go to Services →</a>
+    </div>
+  </section>
+
+  <!-- Optional: Add JS handling if needed -->
+  <script>
+    document.getElementById("companyJoinForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("✅ Your company info has been submitted. We will contact you shortly!");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

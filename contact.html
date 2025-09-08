@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Web Development</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      background-color: orange;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    .btn-primary {
+      padding: 8px 18px;
+      background-color: #0066ff;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn-primary:hover {
+      background-color: blue;
+        color: white;
+        transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .left {
+      flex: 1 1 400px;
+    }
+
+    .left h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .left p {
+      font-size: 18px;
+      color: #444;
+    }
+
+    .right {
+      flex: 1 1 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .card {
+      padding: 24px;
+      border-radius: 16px;
+      background-color: #f4f4f4;
+      color: #222;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .card.green {
+      background-color: #c3fbbe;
+    }
+
+    .card.blue {
+      background-color: #bcc2f7;
+    }
+    .card.cyan {
+      background-color: #86e2f0;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .card button {
+      padding: 10px 20px;
+      border: 2px solid #222;
+      background: transparent;
+      font-weight: 600;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card button:hover {
+      background-color: #000;
+      color: white;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .left, .right {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Web Development</div>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="company.html">Company</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" style="text-decoration: underline;">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="btn-primary" onclick="location.href='https://gemini.google.com'">Get Started</button>
+  </header>
+
+  <!-- Contact Section -->
+  <div class="container">
+    <!-- Left Side -->
+    <div class="left">
+      <h1>Contact Us</h1>
+      <p>Get in touch with the right people at Web Development. We're here to help.</p>
+      <div class="contact-info">
+        <p>Email: web@development.com</p>
+        <p>Phone: +91 9876543210</p>
+        <p>Address: Ahmedabad, India</p>
+        <br />
+        <h2>If You Want To Connect With Us:</h2>
+        <p>Follow On Instagram: @itzz_kb.097</p>
+        <p><b><a href="https://www.instagram.com/itzz_kb.097" target="_blank">Visit Our Profile</a></b></p>
+        <br /><hr>
+        <h3>Click on <a href="https://gemini.google.com" target="_blank">Get Started</a> to Build Your Idea With Google Gemini.</h3>
+      </div>
+    </div>
+
+    <!-- Right Side Cards -->
+    <div class="right">
+      <div class="card green">
+        <h2>Get 24/7 Support</h2>
+        <p>Ask questions, watch tutorials, browse articles or contact an agent.</p>
+        <button onclick="location.href='help.html'">Tour the Help Center</button>
+      </div>
+
+      <div class="card blue">
+        <h2>Discover Enterprise Solutions</h2>
+        <p>Get in touch to find out about exclusive plans tailor-made for your brand.</p>
+        <button onclick="location.href='services.html'">Contact Sales</button>
+      </div>
+
+      <div class="card cyan">
+        <h2>Become a Partner</h2>
+        <p>Grow your Web Development or design agency by earning rewards for creating with us.</p>
+        <button onclick="location.href='company.html'">Join Now</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
